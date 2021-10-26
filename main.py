@@ -26,16 +26,14 @@ class Auto:
         return cantidad  #pendiente puede no funcionar
 
     def verificarIntegridad(self):
-        for i in self.asientos:
-            if ((type(i)==Asiento)):
-                if ((self.motor.registro==self.registro) and (self.registro==i.registro)):
-                    continue
-                else:
-                    return  "Las piezas no son originales"
-                    break
+        if self.registro == self.motor.registro:
+            for i in self.asientos:
+                if type(i)== Asiento:
+                    if i.registro == self.registro:
+                        continue
+                    else:
+                        return 'Las piezas no son originales'
         return 'Auto original'
-
-             
 
 class Motor:
     def __init__(self,numeroCilindros,tipo,registro):
