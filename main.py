@@ -21,7 +21,7 @@ class Auto:
     def cantidadAsientos(self):
         cantidad= 0
         for i in range(len(self.asientos)):
-            if type(self.asientos[i])== 'Asiento':  
+            if type(self.asientos[i])== Asiento:  
                 cantidad += 1
         return cantidad  #pendiente puede no funcionar
 
