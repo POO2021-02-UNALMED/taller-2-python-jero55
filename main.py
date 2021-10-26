@@ -19,7 +19,11 @@ class Auto:
         self.registro = registro
 
     def cantidadAsientos(self):
-        return len(self.asientos)  #pendiente puede no funcionar
+        cantidad= 0
+        for i in range(len(self.asientos)):
+            if type(self.asientos[i])== 'Asiento':  
+                cantidad += 1
+        return cantidad  #pendiente puede no funcionar
 
     def verificarIntegridad(self):
         if self.registro == self.motor.registro:
