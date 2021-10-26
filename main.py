@@ -20,8 +20,8 @@ class Auto:
 
     def cantidadAsientos(self):
         cantidad= 0
-        for i in range(len(self.asientos)):
-            if type(self.asientos[i])== Asiento:  
+        for i in self.asientos:
+            if type(i)== Asiento:  
                 cantidad += 1
         return cantidad  #pendiente puede no funcionar
 
@@ -30,7 +30,8 @@ class Auto:
             for i in range(len(self.asientos)):
                 if self.asientos.registro == self.registro:
                     continue
-                break
+                else:
+                    return 'las piezas no son originales'
         else:
             return 'Las piezas no son originales'
         return 'Auto original'
